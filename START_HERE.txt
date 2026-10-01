@@ -1,0 +1,32 @@
+GIFTORA - SIMPLE START
+======================
+
+1. Right-click the downloaded ZIP file.
+2. Choose "Extract All".
+3. Open the extracted giftora-premium folder.
+4. Double-click OPEN_WEBSITE.bat.
+5. The first time only, wait while website files install.
+6. Your browser should open automatically at:
+
+   http://localhost:3000
+
+IMPORTANT
+---------
+Keep the black Giftora window open while checking the website.
+To stop the website, close that black window or press Ctrl+C.
+
+If Node.js is missing, the launcher opens the Node.js website.
+Install the LTS version, then double-click OPEN_WEBSITE.bat again.
+
+BEST PAGES TO CHECK FIRST
+-------------------------
+Home:                http://localhost:3000
+All Gifts:           http://localhost:3000/gifts
+Product Example:     http://localhost:3000/product/personalised-memory-photo-lamp
+Cart:                http://localhost:3000/cart
+Checkout:            http://localhost:3000/checkout
+Track Order:         http://localhost:3000/track-order
+Wishlist:            http://localhost:3000/wishlist
+Gift Reminders:      http://localhost:3000/reminders
+Corporate Gifting:   http://localhost:3000/corporate-gifts
+Admin:               http://localhost:3000/admin

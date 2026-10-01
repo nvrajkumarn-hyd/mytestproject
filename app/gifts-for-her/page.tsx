@@ -1,0 +1,1 @@
+import ProductBrowser from '@/components/ProductBrowser';import {products} from '@/data/products';export default function Page(){return <ProductBrowser items={products.filter(p=>p.recipients.includes('Her')||p.recipients.includes('Wife')||p.recipients.includes('Girlfriend'))} title='Gifts for Her'/>}

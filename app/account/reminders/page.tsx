@@ -1,0 +1,1 @@
+import ReminderForm from '@/components/ReminderForm';export default function Page(){return <div className='container-shell py-12'><div className='mx-auto max-w-3xl'><span className='eyebrow'>Account</span><h1 className='mt-3 text-4xl font-black'>Gift Reminders</h1><div className='mt-8'><ReminderForm/></div></div></div>}

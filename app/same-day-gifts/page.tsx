@@ -1,0 +1,1 @@
+import ProductBrowser from '@/components/ProductBrowser';import {products} from '@/data/products';export default function Page(){return <ProductBrowser items={products.filter(p=>p.deliveryTypes.includes('Same Day'))} title='Same-Day Gift Ideas'/>}

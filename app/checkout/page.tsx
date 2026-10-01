@@ -1,0 +1,1 @@
+import CheckoutWizard from '@/components/CheckoutWizard';export default function Page(){return <CheckoutWizard/>}

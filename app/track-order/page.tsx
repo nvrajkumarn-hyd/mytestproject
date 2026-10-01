@@ -1,0 +1,1 @@
+import OrderTracker from '@/components/OrderTracker';export default function Page(){return <OrderTracker/>}

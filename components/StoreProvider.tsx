@@ -1,0 +1,8 @@
+
+'use client';
+import { createContext,useContext,useEffect,useMemo,useState } from 'react';
+import type { CartItem,Product } from '@/types';
+type Store={cart:CartItem[];wishlist:string[];addToCart:(item:CartItem)=>void;removeFromCart:(id:string)=>void;clearCart:()=>void;toggleWishlist:(id:string)=>void;cartCount:number;cartTotal:number};
+const C=createContext<Store|undefined>(undefined);
+export function StoreProvider({children}:{children:React.ReactNode}){const[cart,setCart]=useState<CartItem[]>([]);const[wishlist,setWishlist]=useState<string[]>([]);useEffect(()=>{try{setCart(JSON.parse(localStorage.getItem('giftora-cart')||'[]'));setWishlist(JSON.parse(localStorage.getItem('giftora-wishlist')||'[]'))}catch{}},[]);useEffect(()=>{localStorage.setItem('giftora-cart',JSON.stringify(cart))},[cart]);useEffect(()=>{localStorage.setItem('giftora-wishlist',JSON.stringify(wishlist))},[wishlist]);const addToCart=(item:CartItem)=>setCart(v=>{const i=v.findIndex(x=>x.product.id===item.product.id&&JSON.stringify(x.personalization||{})===JSON.stringify(item.personalization||{}));if(i<0)return[...v,item];const n=[...v];n[i]={...n[i],quantity:n[i].quantity+item.quantity};return n});const removeFromCart=(id:string)=>setCart(v=>v.filter(x=>x.product.id!==id));const clearCart=()=>setCart([]);const toggleWishlist=(id:string)=>setWishlist(v=>v.includes(id)?v.filter(x=>x!==id):[...v,id]);const value=useMemo(()=>({cart,wishlist,addToCart,removeFromCart,clearCart,toggleWishlist,cartCount:cart.reduce((a,b)=>a+b.quantity,0),cartTotal:cart.reduce((a,b)=>a+b.product.price*b.quantity,0)}),[cart,wishlist]);return <C.Provider value={value}>{children}</C.Provider>}
+export function useStore(){const v=useContext(C);if(!v)throw new Error('StoreProvider missing');return v}

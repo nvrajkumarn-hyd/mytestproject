@@ -1,0 +1,3 @@
+export const occasions=[
+{name:'Birthday',slug:'birthday',emoji:'🎉'}, {name:'Anniversary',slug:'anniversary',emoji:'💞'}, {name:'Wedding',slug:'wedding',emoji:'💍'}, {name:'Housewarming',slug:'housewarming',emoji:'🏠'}, {name:'Baby Shower',slug:'baby-shower',emoji:'🍼'}, {name:'Congratulations',slug:'congratulations',emoji:'🎊'}, {name:'Love & Romance',slug:'love-romance',emoji:'❤️'}, {name:'Thank You',slug:'thank-you',emoji:'🙏'}, {name:'Diwali',slug:'diwali',emoji:'🪔'}, {name:'Christmas',slug:'christmas',emoji:'🎄'}, {name:'Mother’s Day',slug:'mothers-day',emoji:'🌷'}, {name:'Father’s Day',slug:'fathers-day',emoji:'🏆'}
+];

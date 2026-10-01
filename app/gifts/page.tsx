@@ -1,0 +1,1 @@
+import ProductBrowser from '@/components/ProductBrowser';import {products} from '@/data/products';export default async function Gifts({searchParams}:{searchParams:Promise<{q?:string}>}){const q=(await searchParams).q||'';return <ProductBrowser items={products} title="Find the Perfect Gift" initialQuery={q}/>}

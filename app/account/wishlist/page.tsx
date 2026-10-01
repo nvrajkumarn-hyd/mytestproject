@@ -1,0 +1,1 @@
+import WishlistClient from '@/components/WishlistClient';export default function Page(){return <WishlistClient/>}
